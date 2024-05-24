@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"> <a href="index.html"> <img src="img/Green Mark.svg" alt=""> </a> </div>
+
+            <ul class="links">
+                <li> <a href="stepper.html">Carboon Footprint Calculation</a> </li>
+                <li><a href="whatiscarbon.html">What is the Carbon Footprint?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="" class="action_btn login_btn navLogin">Login</a>
+            <a href="#logout" class="action_btn logout">Logout</a>
+        </nav>
+    </header>
+    <!-- Navbar -->
+    <!-- Main Content -->
+    <main>
+        <div class="profile-container">
+            <h2>Settings</h2>
+            <h2 class="welcome">Welcome new user</h2>
+            <form action="/submit-your-form" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="username">Choose Username</label>
+                        <input type="text" id="username" name="username" placeholder="eg. Jacob">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="eg. jacob@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="text" id="mobile" name="mobile" placeholder="eg. 99988877">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current_password">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new_password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password">
+                </div>
+                <div class="submit-button-container">
+                    <input type="submit" value="Save Changes" class="submit-button">
+                </div>
+            </form>
+        </div>
+       <!-- footer -->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img src="./img/Green Mark white.svg" class="logo">
+                <p>Every Step Counts Towards a Greener Tomorrow!</p>
+                <div class="social-icons">
+                    <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                    <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                    <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-footer">
+                <ul>
+                    <h3>Company<div class="under"><span></span></div>
+                    </h3>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="questions.html">Carboon Footprint Calculation</a></li>
+                    <li> <a href="carbon.html">What is the Carbon Footprint?</a></li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <ul>
+                    <h3>Contact <div class="under"><span></span></div>
+                    </h3>
+                    <li><a href="">Contact Us</a></li>
+                    <p class="email-id">greenmark@gmail.com</p>
+                    <h4>+47 000 00 000</h4>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Green Mark © 2024 - All Rights Reserved </p>
+    </footer>
+</body>
+<script type="module" src="index.js" defer></script>
+<script src="dist\bundle.js" defer></script>
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="top">
+        <div class="logo">
+            <i class="bx bxs-user-account"></i>
+            <span>Greenmark</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <div class="user">
+        <img src="img/Green_Mark.png" alt="user" class="user-img">
+        <div>
+            <p class="bold">Jacob Jacobsen.</p>
+            <p>Title</p>
+        </div>
+    </div>
+    <ul>
+        <li>
+            <a href="index.html">
+                <i class="bx bxs-grid-alt"></i>
+                <span class="nav-item">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+        </li>
+        <li>
+            <a href="profile.html">
+                <i class="bx bxs-cog"></i>
+                <span class="nav-item">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bxs-calendar"></i>
+                <span class="nav-item">Footprint</span>
+            </a>
+            <span class="tooltip">Footprint</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bxs-log-out"></i>
+                <span class="nav-item">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+        </li>
+    </ul>
+    <!-- Sidebar -->
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function () {
+            sidebar.classList.toggle('active');
+        };
+    </script>
+    <!-- Footer -->
+
+</html>

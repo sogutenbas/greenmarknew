@@ -1,0 +1,83 @@
+.cardBox {
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .cardName {
+    color: #999;
+    font-size: 1.11em;
+    margin-top: 5px;
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2em;
+    color: #56ca19;
+}
+
+
+.cardBox .card:hover {
+    background-color: #56ca19;
+
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName {
+    color: #fff;
+}
+
+/* charts */
+.graphBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    min-height: 200px;
+
+}
+
+.graphBox .box {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.graphBox .box2 {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+#resultsChart {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+}
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact Survey</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="/css/question.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .question { display: none; } /* Initially hide all questions */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="img/Green Mark.svg" alt=""></a></div>
+            <ul class="links">
+                <li><a href="questions.html">Carbon Footprint Calculation</a></li>
+                <li><a href="carbon.html">What is the Carbon Footprint?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="/dist/login.html" class="action_btn">Login</a>
+        </nav>
+    </header>
+    <div class="progress-container">
+        <ul class="progress-stepper">
+            <!-- Dynamic generation of steps -->
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    const stepsCount = 10;  // Total number of questions
+                    let stepsHtml = '';
+                    for (let i = 1; i <= stepsCount; i++) {
+                        stepsHtml += `<li class="step" id="step${i}">
+                            <a>
+                                <span class="step-circle">${i * 10}%</span>
+                            </a>
+                        </li>`;
+                    }
+                    document.querySelector('.progress-stepper').innerHTML = stepsHtml;
+                    updateProgress(1);  // Initialize progress for the first question
+                });
+            </script>
+        </ul>
+    </div>
+
+    <h1>Carbon Footprint Calculation</h1>
+    <div id="questions-container">
+        <!-- Each question needs a unique ID and the first one should be initially visible -->
+        <div class="question" id="question1" style="display: block;">
+            <p>How much meat have you eaten this month?</p>
+            <select name="meatConsumption" required>
+                <option value="2">None</option>
+                <option value="4">Less than 5 kg</option>
+                <option value="6">Less than 10 kg</option>
+                <option value="8">Less than 15 kg</option>
+                <option value="10">More than 15 kg</option>
+            </select>
+            <button onclick="nextQuestion(1)">Next</button>
+        </div>
+
+        <div class="question" id="question2">
+            <p>How would you describe your household's water conservation efforts?</p>
+            <select name="WaterConservation" required>
+                <option value="10">No effort</option>
+                <option value="8">Occasional effort</option>
+                <option value="6">Consistent basic practices</option>
+                <option value="4">Active and improving</option>
+                <option value="2">Excellent effort</option>
+            </select>
+            <button onclick="nextQuestion(2)">Next</button>
+        </div>
+
+        <div class="question" id="question3">
+            <p>How would you rate the use of environmentally friendly cleaning products in your home?</p>
+            <select name="CleaningProducts" required>
+                <option value="10">Never</option>
+                <option value="8">Rarely</option>
+                <option value="6">Occasionally </option>
+                <option value="4">Regularly</option>
+                <option value="2">Frequently </option>
+            </select>
+            <button onclick="nextQuestion(3)">Next</button>
+        </div>
+
+        <div class="question" id="question4">
+            <p>How would you rate the frequency of using public transportation or carpooling instead of driving alone?</p>
+            <select name="Driving" required>
+                <option value="10">Never</option>
+                <option value="8">Rarely</option>
+                <option value="6">Occasionally </option>
+                <option value="4">Regularly</option>
+                <option value="2">Frequently </option>
+            </select> 
+            <button onclick="nextQuestion(4)">Next</button>
+        </div>
+
+        <div class="question" id="question5">
+            <p>How often do you walk or cycle instead of using a motor vehicle for short-distance travels?</p>
+            <select name="motorVehicle" required>
+                <option value="10">Never</option>
+                <option value="8">Rarely</option>
+                <option value="6">Occasionally </option>
+                <option value="4">Often</option>
+                <option value="2">Always </option>
+            </select> 
+            <button onclick="nextQuestion(5)">Next</button>
+        </div>
+
+        <div class="question" id="question6">
+            <p>How often do you choose sustainable options like trains or buses for long-distance travel instead of flying?</p>
+            <select name="Flying" required>
+                <option value="10">Never</option>
+                <option value="8">Rarely</option>
+                <option value="6">Occasionally </option>
+                <option value="4">Often</option>
+                <option value="2">Always </option>
+            </select> 
+            <button onclick="nextQuestion(6)">Next</button>
+        </div>
+
+        <div class="question" id="question7">
+            <p>How often do you recycle</p>
+            <select name="Recycle" required>
+                <option value="10">Never</option>
+                <option value="8">Rarely</option>
+                <option value="6">Sometimes </option>
+                <option value="4">Often</option>
+                <option value="2">Always </option>
+            </select> 
+            <button onclick="nextQuestion(7)">Next</button>
+        </div>
+
+        <div class="question" id="question8">
+            <p>How committed are you to buying locally produced goods?</p>
+            <select name="Recycle" required>
+                <option value="10">Not committed at all</option>
+                <option value="8">Slightly committed</option>
+                <option value="6">Moderately committed</option>
+                <option value="4">Fairly committed</option>
+                <option value="2">Highly committed</option>
+            </select> 
+            <button onclick="nextQuestion(8)">Next</button>
+        </div>
+
+        <div class="question" id="question9">
+            <p>How conscious are you of your household's energy consumption?</p>
+            <select name="Recycle" required>
+                <option value="10">Not conscious at all</option>
+                <option value="8">Slightly conscious</option>
+                <option value="6">Moderately conscious</option>
+                <option value="4">Very conscious</option>
+                <option value="2">Extremely conscious</option>
+            </select> 
+            <button onclick="nextQuestion(9)">Next</button>
+        </div>
+
+        <div class="question" id="question10">
+            <p>How often do you use single-use plastics?</p>
+            <select name="Recycle" required>
+                <option value="10">Very frequently</option>
+                <option value="8">Frequently </option>
+                <option value="6">Occasionally</option>
+                <option value="4">Rarely</option>
+                <option value="2">Never</option>
+            </select> 
+            <button onclick="handleSubmit()">Submit</button> <!-- Use handleSubmit for final submission -->
+        </div>
+    </div>
+
+
+   <!-- footer -->
+   <footer>
+    <div class="row-footer">
+        <div class="col-footer">
+            <img src="./img/Green Mark white.svg" class="logo">
+            <p>Every Step Counts Towards a Greener Tomorrow!</p>
+            <div class="social-icons">
+                <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="col-footer">
+            <ul>
+                <h3>Company<div class="under"><span></span></div>
+                </h3>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="questions.html">Carboon Footprint Calculation</a></li>
+                <li> <a href="carbon.html">What is the Carbon Footprint?</a></li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <ul>
+                <h3>Contact <div class="under"><span></span></div>
+                </h3>
+                <li><a href="">Contact Us</a></li>
+                <p class="email-id">greenmark@gmail.com</p>
+                <h4>+47 000 00 000</h4>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Green Mark © 2024 - All Rights Reserved </p>
+</footer>
+</body>
+</html>

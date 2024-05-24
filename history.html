@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootprintHistory</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/stepper.css">
+    <link rel="stylesheet" href="./css/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/history.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/history.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"> <a href="index.html"> <img src="img/Green Mark.svg" alt=""> </a> </div>
+
+            <ul class="links">
+                <li> <a href="questions.html">Carboon Footprint Calculation</a> </li>
+                <li><a href="carbon.html">What is the Carbon Footprint?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="/dist/login.html" class="action_btn">Login</a>
+        </nav>
+    </header>
+    <h1>Your footprint history</h1>
+    <!-- Chart -->
+    <div class="content">
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>
+        <h2>Reduce your emissions with emission reduction tips!</h2>
+        <!-- Textboxes -->
+        <div class="textbox-container">
+            <div class="textbox" id="textbox1">
+                <h3>Recycling</h3>Recycling reduces greenhouse gas emissions by cutting down the need for
+                energy-intensive raw material extraction and processing. Using recycled materials requires less energy,
+                lowering carbon emissions. Additionally, recycling minimizes waste in landfills, which decreases methane
+                production. Overall, recycling conserves resources and helps combat climate change.
+            </div>
+            <div class="textbox" id="textbox2">
+                <h3>Transportation</h3>Adopting cleaner transportation methods, like electric vehicles and public
+                transit, significantly reduces greenhouse gas emissions. Electric vehicles produce zero tailpipe
+                emissions, and public transportation reduces the number of individual car journeys. Enhancing fuel
+                efficiency and promoting cycling or walking can further decrease emissions, contributing to a
+                sustainable future.
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img src="./img/Green Mark white.svg" class="logo">
+                <p>Every Step Counts Towards a Greener Tomorrow!</p>
+                <div class="social-icons">
+                    <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                    <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                    <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-footer">
+                <ul>
+                    <h3>Company<div class="under"><span></span></div>
+                    </h3>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="questions.html">Carboon Footprint Calculation</a></li>
+                    <li> <a href="carbon.html">What is the Carbon Footprint?</a></li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <ul>
+                    <h3>Contact <div class="under"><span></span></div>
+                    </h3>
+                    <li><a href="">Contact Us</a></li>
+                    <p class="email-id">greenmark@gmail.com</p>
+                    <h4>+47 000 00 000</h4>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Green Mark © 2024 - All Rights Reserved </p>
+    </footer>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxs-user-account"></i>
+                <span>Greenmark</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="img/Green_Mark.png" alt="user" class="user-img">
+            <div>
+                <p class="bold">Jacob Jacobsen.</p>
+                <p>Title</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="bx bxs-cog"></i>
+                    <span class="nav-item">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-calendar"></i>
+                    <span class="nav-item">Footprint</span>
+                </a>
+                <span class="tooltip">Footprint</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-log-out"></i>
+                    <span class="nav-item">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

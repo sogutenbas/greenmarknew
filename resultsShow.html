@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Navbar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/results.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="img/Green Mark.svg" alt=""></a></div>
+            <ul class="links">
+                <li><a href="questions.html">Carbon Footprint Calculation</a></li>
+                <li><a href="carbon.html">What is the Carbon Footprint?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="/dist/login.html" class="action_btn">Login</a>
+        </nav>
+    </header>
+
+    <h1>Your footprint</h1>
+    <h1 id="feedbackMessage"></h1>
+    <canvas id="resultsChart" width="400" height="400"></canvas>
+
+<!-- footer -->
+<footer>
+    <div class="row-footer">
+        <div class="col-footer">
+            <img src="./img/Green Mark white.svg" class="logo">
+            <p>Every Step Counts Towards a Greener Tomorrow!</p>
+            <div class="social-icons">
+                <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="col-footer">
+            <ul>
+                <h3>Company<div class="under"><span></span></div>
+                </h3>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="questions.html">Carboon Footprint Calculation</a></li>
+                <li> <a href="carbon.html">What is the Carbon Footprint?</a></li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <ul>
+                <h3>Contact <div class="under"><span></span></div>
+                </h3>
+                <li><a href="">Contact Us</a></li>
+                <p class="email-id">greenmark@gmail.com</p>
+                <h4>+47 000 00 000</h4>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Green Mark © 2024 - All Rights Reserved </p>
+</footer>
+
+    <script src="/js/resultsScript.js"></script>
+</body>
+
+</html>

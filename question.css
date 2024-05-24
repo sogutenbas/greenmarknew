@@ -1,0 +1,142 @@
+
+body {
+    background-color: #eeeeea;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+
+}
+/* Centering the question container */
+#questions-container {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 600px; /* Keeping the questions container width sensible */
+    margin: 20px auto; /* Centering the div with auto margins */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.question {
+    width: 100%; /* Full width of the container */
+    display: none; /* Hidden by default, shown one at a time */
+    text-align: center; /* Center text */
+}
+.question.active {
+    display: block; /* Show the active question */
+}
+
+button {
+    margin-top: 20px; /* Space above the button */
+}
+/* Container styles */
+.container {
+    width: 80%;
+    max-width: 1170px;
+    margin: 40px auto;  /* Increased margin for better spacing */
+    padding: 40px;      /* Increased padding for a cleaner look */
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    border-radius: 15px; /* Increased border radius for a smoother look */
+}
+
+
+/* Progress bar styles */
+.progress-container {
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.progress-stepper {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+     width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px); /* Adjust for spacing */
+    height: 2px;
+    background-color: #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.step-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    font-weight: bold;
+}
+
+.step-active .step-circle {
+    background-color: #4CAF50;/* Active step highlighted in green */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 36px;  /* Increased font size */
+    margin-bottom: 40px;  /* Added margin for better spacing */
+}
+
+/* Question styles */
+.question {
+    display: none;
+    margin-bottom: 40px;  /* Added margin for spacing between questions */
+}
+
+.question.active {
+    display: block;
+}
+
+.question p {
+    font-size: 20px;  /* Increased font size */
+    margin-bottom: 20px;  /* Increased margin for better spacing */
+}
+
+select {
+    width: 100%;
+    padding: 15px;  /* Increased padding for a better feel */
+    margin-bottom: 30px;  /* Increased margin for spacing */
+    border-radius: 10px;  /* Increased border radius */
+    border: 1px solid #ccc;
+}
+
+/* Button styles */
+button {
+    padding: 15px 30px;  /* Increased padding */
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 25px;  /* Increased border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for scaling effect */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Added scaling effect */
+}
+
+button:active {
+    transform: scale(0.95); /* Added scaling effect */
+}

@@ -1,0 +1,60 @@
+.links li {
+    list-style: none;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #072849;
+    font-size: 1rem;
+}
+
+.links li a:hover {
+    color: #56ca19;
+}
+
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 55px;
+    height: 55px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.action_btn {
+    background-color: #56ca19;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
