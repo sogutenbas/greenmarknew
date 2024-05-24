@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Mark</title>
+  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"> <a href="/index.html"> <img src="/img/Green Mark.svg" alt=""> </a> </div>
+
+      <ul class="links">
+        <li><a href="../stepper.html">Carboon Footprint Calculation</a></li>
+        <li>
+          <a href="../whatiscarbon.html">What is the Carbon Footprint?</a>
+        </li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+      <a href="" class="action_btn login_btn navLogin">Login</a>
+      <a href="#logout" class="action_btn logout">Logout</a>
+    </nav>
+  </header>
+
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="openLogin()">
+        Log In
+      </button>
+      <button type="button" class="toggle-btn" onclick="openRegister()">
+        Sign Up
+      </button>
+    </div>
+    <div class="input-group" id="login">
+      <form class="login">
+        <label for="email">Email:</label>
+        <input type="email" name="email" class="input-field" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" class="input-field" required />
+        <input type="submit" class="submit-btn" value="Login" />
+      </form>
+    </div>
+    <div class="input-group" id="register" style="left: 450px">
+      <form class="signup">
+        <label for="username">Username:</label>
+        <input type="username" name="username" class="input-field" required />
+        <label for="email">Email:</label>
+        <input type="email" name="email" class="input-field" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" class="input-field" required />
+        <input type="checkbox" class="check-box" id="agree" />
+        <label for="agree">I agree to the terms & conditions</label>
+        <input type="submit" class="submit-btn" value="Signup" />
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN SCRIPTS -->
+  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="../index.js"></script>
+  <script src="bundle.js"></script>
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function openRegister() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function openLogin() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0";
+    }
+  </script>
+</body>
+<!-- Footer -->
+<footer>
+  <div class="row-footer">
+    <div class="col-footer">
+      <img src="/img/Green Mark white.svg" class="logo" />
+      <p>Every Step Counts Towards a Greener Tomorrow!</p>
+    </div>
+    <div class="col-footer">
+      <h3>
+        Contact
+        <div class="under"><span></span></div>
+      </h3>
+
+      <p>Contact Us</p>
+      <p class="email-id">greenmark@gmail.com</p>
+      <h4>+47 000 00 000</h4>
+    </div>
+    <div class="col-footer">
+      <ul>
+        <h3>
+          Company
+          <div class="under"><span></span></div>
+        </h3>
+        <li><a href="">Home</a></li>
+        <li><a href="">Carbon Footprint Calculation</a></li>
+        <li><a href="">What is the Carbon Footprint?</a></li>
+      </ul>
+    </div>
+    <div class="col-footer">
+      <h3>
+        Follow us
+        <div class="under"><span></span></div>
+      </h3>
+      <div class="social-icons">
+        <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+        <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+        <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <p class="copyright">Green Mark Â© 2024 - All Rights Reserved</p>
+</footer>
+
+<!-- Footer -->
+<script>
+  let btn = document.querySelector("#btn");
+  let sidebar = document.querySelector(".sidebar");
+
+  btn.onclick = function () {
+    sidebar.classList.toggle("active");
+  };
+</script>
+
+</html>
